@@ -1,0 +1,141 @@
+# Struktura projektu
+
+## Frontend (React + TypeScript)
+
+```
+finance-app/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── LoginForm.tsx
+│   │   │   └── RegisterForm.tsx
+│   │   ├── common/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── Input.tsx
+│   │   │   └── NavBar.tsx
+│   │   ├── dashboard/
+│   │   │   ├── DashboardHeader.tsx
+│   │   │   ├── FinanceSummary.tsx
+│   │   │   ├── RecentWorkLogs.tsx
+│   │   │   └── DebtOverview.tsx
+│   │   ├── debts/
+│   │   │   ├── DebtCard.tsx
+│   │   │   ├── DebtForm.tsx
+│   │   │   ├── DebtList.tsx
+│   │   │   └── PaymentHistory.tsx
+│   │   ├── finances/
+│   │   │   ├── FinanceForm.tsx
+│   │   │   ├── FinanceList.tsx
+│   │   │   ├── FinanceStats.tsx
+│   │   │   └── CategorySelector.tsx
+│   │   ├── layouts/
+│   │   │   ├── MainLayout.tsx
+│   │   │   ├── AuthLayout.tsx
+│   │   │   └── MobileLayout.tsx
+│   │   ├── settings/
+│   │   │   ├── ProfileSettings.tsx
+│   │   │   └── AppSettings.tsx
+│   │   └── timer/
+│   │       ├── Timer.tsx
+│   │       ├── TimerControls.tsx
+│   │       ├── WorkLogForm.tsx
+│   │       └── WorkLogList.tsx
+│   ├── context/
+│   │   ├── AuthContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── WorkLogContext.tsx
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── useDebts.ts
+│   │   ├── useFinances.ts
+│   │   ├── useLocalStorage.ts
+│   │   ├── useTimer.ts
+│   │   └── useWorkLogs.ts
+│   ├── pages/
+│   │   ├── auth/
+│   │   │   ├── Login.tsx
+│   │   │   └── Register.tsx
+│   │   ├── Dashboard.tsx
+│   │   ├── DebtsPage.tsx
+│   │   ├── FinancesPage.tsx
+│   │   ├── NotFound.tsx
+│   │   ├── Settings.tsx
+│   │   └── TimerPage.tsx
+│   ├── services/
+│   │   ├── api.ts
+│   │   ├── auth.service.ts
+│   │   ├── debt.service.ts
+│   │   ├── finance.service.ts
+│   │   └── worklog.service.ts
+│   ├── types/
+│   │   ├── auth.types.ts
+│   │   ├── debt.types.ts
+│   │   ├── finance.types.ts
+│   │   └── worklog.types.ts
+│   ├── utils/
+│   │   ├── dateUtils.ts
+│   │   ├── formatters.ts
+│   │   ├── storage.ts
+│   │   └── validators.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── globals.css
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+└── README.md
+```
+
+## Backend (Node.js + Express + MongoDB)
+
+```
+finance-api/
+├── src/
+│   ├── config/
+│   │   ├── db.js
+│   │   ├── env.js
+│   │   └── cors.js
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── debt.controller.js
+│   │   ├── finance.controller.js
+│   │   ├── setting.controller.js
+│   │   └── worklog.controller.js
+│   ├── middlewares/
+│   │   ├── auth.middleware.js
+│   │   ├── error.middleware.js
+│   │   └── validation.middleware.js
+│   ├── models/
+│   │   ├── debt.model.js
+│   │   ├── finance.model.js
+│   │   ├── setting.model.js
+│   │   ├── user.model.js
+│   │   └── worklog.model.js
+│   ├── routes/
+│   │   ├── auth.routes.js
+│   │   ├── debt.routes.js
+│   │   ├── finance.routes.js
+│   │   ├── setting.routes.js
+│   │   └── worklog.routes.js
+│   ├── services/
+│   │   ├── auth.service.js
+│   │   ├── debt.service.js
+│   │   ├── finance.service.js
+│   │   ├── recurring.service.js
+│   │   └── worklog.service.js
+│   ├── utils/
+│   │   ├── calculations.js
+│   │   ├── date.utils.js
+│   │   └── validators.js
+│   ├── app.js
+│   └── server.js
+├── package.json
+├── .env.example
+└── README.md
+```
